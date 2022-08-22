@@ -8,9 +8,11 @@ function addPlayersToTheList(playerName) {
         li.classList.add('list-class', 'item');
         li.innerText = playerName;
         ol.append(li);
+        return true;
     }
     else {
         alert("You can't add more than 5 players in your team!");
+        return false;
     }
 
 }
@@ -22,13 +24,15 @@ for (const selectButton of selectButtons) {
         // button functions 
         const parentOfParentNode = event.target.parentNode.parentNode;
         const playerName = parentOfParentNode.querySelector('h5').innerText;
-        // disable select button
-        const targetNode = event.target;
-        targetNode.setAttribute('disabled', true);
-        //remove animation of card when selected
-        parentOfParentNode.parentNode.classList.remove('blog');
         //ad to list
-        addPlayersToTheList(playerName);
+        const status = addPlayersToTheList(playerName);
+        if (status) {
+            // disable select button
+            const targetNode = event.target;
+            targetNode.setAttribute('disabled', true);
+            //remove animation of card when selected
+            parentOfParentNode.parentNode.classList.remove('blog');
+        }
 
     });
 }
@@ -67,7 +71,7 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
     }
 
     else if (isNaN(managerCostString)) {
-        alert("Only numbers are allowed to the 'Per Player' section.");
+        alert("Only numbers are allowed to the 'Manager' section.");
         managerCostElement.value = '';
     }
     else if (parseFloat(managerCostString) < 0) {
