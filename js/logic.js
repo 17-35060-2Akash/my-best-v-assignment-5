@@ -57,7 +57,7 @@ document.getElementById('btn-calculate').addEventListener('click', function (eve
         const perPlayerCost = parseFloat(perPlayerCostString);
         // console.log(perPlayerCost);
         const playerExpenses = perPlayerCost * document.querySelectorAll('.item').length;
-        document.getElementById('player-expenses-amount').innerText = playerExpenses;
+        document.getElementById('player-expenses-amount').innerText = playerExpenses.toFixed(2);
 
     }
 });
@@ -102,8 +102,8 @@ document.getElementById('btn-calculate-total').addEventListener('click', functio
             const coachCost = parseFloat(coachCostString);
             console.log(coachCost);
             //calculate total calculation
-            document.getElementById('total-expenses-amount').innerText = parseFloat(document.getElementById('player-expenses-amount').innerText)
-                + managerCost + coachCost;
+            document.getElementById('total-expenses-amount').innerText = (parseFloat(document.getElementById('player-expenses-amount').innerText)
+                + managerCost + coachCost).toFixed(2);
         }
 
 
