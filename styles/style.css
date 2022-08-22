@@ -24,7 +24,13 @@ body .top-banner-container {
 
 /* top banner ends  */
 
+body {
+    background-image: linear-gradient(rgb(22, 21, 21), rgb(80, 77, 77));
+}
+
 /* players start  */
+
+
 
 .blog:hover {
     transform: scale(1.08);
