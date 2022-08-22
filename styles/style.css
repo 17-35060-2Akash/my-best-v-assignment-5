@@ -27,8 +27,18 @@ body .top-banner-container {
 /* players start  */
 
 .blog:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
     transition: transform 2s ease;
 }
 
 /* players end  */
+
+/* footer starts */
+@media screen and (max-width: 576px) {
+    .footer-container {
+        position: relative;
+        top: 500px;
+    }
+}
+
+/* footer ends */
