@@ -43,8 +43,23 @@ body {
 @media screen and (max-width: 576px) {
     .footer-container {
         position: relative;
-        top: 500px;
+        top: 200px;
+    }
+
+    .list-class {
+        font-size: 80%;
+        margin-bottom: 25px;
+        /* color: rgb(216, 20, 1); */
+        font-weight: 500;
+        margin-left: 110px;
     }
 }
 
 /* footer ends */
+
+.list-class {
+    font-size: 80%;
+    margin-bottom: 25px;
+    /* color: rgb(216, 20, 1); */
+    font-weight: 500;
+}
